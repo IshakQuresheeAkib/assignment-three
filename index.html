@@ -37,7 +37,40 @@
 </head>
 <body>
     <header class="px-0 xl:px-12">
-        <!-- navbar -->
+        <!--mobile navbar -->
+        <div class="drawer drawer-end block md:hidden z-50">
+          <input id="my-drawer-4" type="checkbox" class="drawer-toggle" /> 
+          <div class="drawer-content flex flex-col">
+            <div class="w-full navbar bg-white">
+              <div class="flex-1 px-2 mx-2">
+                <div class="flex gap-4 flex-1 xl:pr-11">
+                    <img class="w-8 h-9" src="./images/logo.png" alt="">
+                    <h3 class="text-[#000000] font-extrabold text-3xl">Fruit Burst</h3>
+                </div>
+              </div>
+              <div>
+                <label for="my-drawer-4" class="btn btn-square btn-ghost">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </label>
+              </div> 
+            </div>
+          </div> 
+          <div class="drawer-side ">
+            <label for="my-drawer-4" class="drawer-overlay "></label> 
+            <ul class="menu p-10 w-4/5 bg-[#f86a6d] h-screen space-y-10">
+                <div class="form-control relative w-48 mx-auto border-none shadow-xl rounded-3xl">                    
+                  <input type="text" placeholder="Search here" class="input input-bordered rounded-3xl border-none text-sm text-gray-400" />
+                  <i class="fa-solid fa-magnifying-glass absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-800"></i>
+                </div>
+              
+              <li class="text-white text-lg"><a>Home</a></li>
+              <li class="text-white text-lg"><a>About Us</a></li>
+              <li class="text-white text-lg"><a>Shop</a></li>
+              <li class="text-white text-lg"><a>All Fruits</a></li>      
+            </ul>           
+          </div>
+        </div>
+<!-- desktop navbar -->
         <nav class="navbar bg-[#F85559] rounded-[600px] xl:py-5 my-8 hidden md:flex">
                 <div class="flex-1 xl:pl-8">
                   <ul class="flex gap-4 xl:gap-8">
@@ -60,7 +93,7 @@
         </nav>
       <!--  
         <!-- hero section -->
-        <div class="carousel relative max-w-full">
+        <div class="carousel relative max-w-full -z-10 ">
             <div id="slide1" class="carousel-item relative w-full h-full md:h-[calc(100vh-200px)] ">
                 <div class="hero min-w-full bg-bg-hero1 bg-cover bg-no-repeat mix-blend-multiply">
                   <div class="text-center mx-auto py-10 md:pt-24 text-white bg-gradient-to-b from-black w-full h-full space-y-5">
@@ -476,7 +509,7 @@
           <a class="link link-hover">Support</a>
           <a class="link link-hover">My Account</a>
         </div>  
-        <div class="flex gap-6">
+        <div class="flex gap-6 flex-wrap justify-center">
           <i class="fa-brands fa-facebook text-3xl"></i>
           <i class="fa-brands fa-youtube text-3xl"></i>
           <i class="fa-brands fa-twitter text-3xl"></i>
